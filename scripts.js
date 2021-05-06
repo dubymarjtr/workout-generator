@@ -462,6 +462,7 @@ const abs = [
   },
 ];
 const p = document.querySelector('p');
+const form = document.querySelector('form');
 
 document.querySelector('form').addEventListener('submit', event => {
   event.preventDefault();
@@ -498,3 +499,7 @@ function displayExercises(exercises) {
 
   p.innerHTML = display;
 }
+form.addEventListener('submit', () => {
+  console.log('hello');
+  displayExercises(getRandomExercises(abs));
+});
