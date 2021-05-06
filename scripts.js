@@ -468,11 +468,13 @@ let fname;
 let lname;
 let level;
 
-document.querySelector('form').addEventListener('submit', event => {
+form.addEventListener('submit', event => {
   event.preventDefault();
   fname = document.querySelector('#fname').value;
   lname = document.querySelector('#lname').value;
   level = document.querySelector('#level').value;
+  divButtons.style.display = 'block';
+  form.reset();
 });
 
 function getRandomExercises(array) {
@@ -503,12 +505,10 @@ function displayExercises(exercises) {
 
   p.innerHTML = display;
 }
-form.addEventListener('submit', () => {
-  divButtons.style.display = 'block';
-});
 
 document.querySelectorAll('.btn').forEach(btn =>
   btn.addEventListener('click', event => {
+    document.querySelector('.div-workout').style.display = 'block';
     const option = event.target.id;
     if (option === 'btn-upper') {
       if (level === 'beginner') {
@@ -527,3 +527,7 @@ document.querySelectorAll('.btn').forEach(btn =>
     }
   }),
 );
+
+document.querySelector('#hide-div').addEventListener('click', () => {
+  document.querySelector('.div-workout').style.display = 'none';
+});
