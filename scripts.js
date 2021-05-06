@@ -461,6 +461,7 @@ const abs = [
       'Lie on your stomach, then lift yourself up onto your forearms and toes. Keep your elbows directly beneath your shoulders. Draw your shoulders away from your ears. Squeeze your abs and glutes and keep your hips, neck and spine in one straight line. Aim to hold for anywhere from 20 seconds to a minute. Hold and breathe in and out through your nose.',
   },
 ];
+const p = document.querySelector('p');
 
 document.querySelector('form').addEventListener('submit', event => {
   event.preventDefault();
@@ -468,3 +469,20 @@ document.querySelector('form').addEventListener('submit', event => {
   const lname = document.querySelector('#lname').value;
   const level = document.querySelector('#level').value;
 });
+
+function getRandomExercises(array) {
+  const max = 9;
+  const excercises = [];
+  let n = 0;
+  while (n < 5) {
+    const newRandomIndex = Math.floor(Math.random() * max);
+    const newRandomItem = array[newRandomIndex];
+    if (!excercises.includes(newRandomItem)) {
+      excercises.push(newRandomItem);
+      n += 1;
+    }
+  }
+  return excercises;
+}
+
+console.log(getRandomExercises(upperB));
