@@ -472,17 +472,15 @@ document.querySelector('form').addEventListener('submit', event => {
 
 function getRandomExercises(array) {
   const max = 9;
-  const excercises = [];
+  const exercises = [];
   let n = 0;
   while (n < 5) {
     const newRandomIndex = Math.floor(Math.random() * max);
     const newRandomItem = array[newRandomIndex];
-    if (!excercises.includes(newRandomItem)) {
-      excercises.push(newRandomItem);
+    if (!exercises.includes(newRandomItem)) {
+      exercises.push(newRandomItem);
       n += 1;
     }
   }
-  return excercises;
+  return exercises;
 }
-
-console.log(getRandomExercises(upperB));
