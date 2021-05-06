@@ -463,12 +463,16 @@ const abs = [
 ];
 const p = document.querySelector('p');
 const form = document.querySelector('form');
+const divButtons = document.querySelector('.buttons-choose');
+let fname;
+let lname;
+let level;
 
 document.querySelector('form').addEventListener('submit', event => {
   event.preventDefault();
-  const fname = document.querySelector('#fname').value;
-  const lname = document.querySelector('#lname').value;
-  const level = document.querySelector('#level').value;
+  fname = document.querySelector('#fname').value;
+  lname = document.querySelector('#lname').value;
+  level = document.querySelector('#level').value;
 });
 
 function getRandomExercises(array) {
@@ -500,6 +504,26 @@ function displayExercises(exercises) {
   p.innerHTML = display;
 }
 form.addEventListener('submit', () => {
-  console.log('hello');
-  displayExercises(getRandomExercises(abs));
+  divButtons.style.display = 'block';
 });
+
+document.querySelectorAll('.btn').forEach(btn =>
+  btn.addEventListener('click', event => {
+    const option = event.target.id;
+    if (option === 'btn-upper') {
+      if (level === 'beginner') {
+        displayExercises(getRandomExercises(upperB));
+      } else if (level === 'intermediate') {
+        displayExercises(getRandomExercises(upperI));
+      } else displayExercises(getRandomExercises(upperA));
+    } else if (option === 'btn-lower') {
+      if (level === 'beginner') {
+        displayExercises(getRandomExercises(lowerB));
+      } else if (level === 'intermediate') {
+        displayExercises(getRandomExercises(lowerI));
+      } else displayExercises(getRandomExercises(lowerA));
+    } else if (option === 'btn-abs') {
+      displayExercises(getRandomExercises(abs));
+    }
+  }),
+);
