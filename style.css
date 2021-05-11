@@ -162,4 +162,21 @@ table tr:nth-child(even) {
     background-color: #92436e;
     transition: 0.5s;
   }
+
+  #hide-div {
+    background-color: #a16565;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    padding: 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.5s;
+  }
+
+  #hide-div:hover {
+    background-color: #003a5b;
+    transition: 0.5s;
+  }
 }
