@@ -531,6 +531,7 @@ document.querySelectorAll('.btn').forEach(btn =>
     } else if (option === 'btn-abs') {
       displayExercises(getRandomExercises(abs));
     }
+    p.innerText = `Personalized workout for ${fname} ${lname} in level ${level}:`;
   }),
 );
 
