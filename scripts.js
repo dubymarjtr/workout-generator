@@ -32,7 +32,7 @@ const upperB = [
   {
     exercise: 'Bent-over row',
     reps: '4 x 10',
-    weight: '7.5b',
+    weight: '7.5lb',
     description:
       'Move your torso in a 45-degree angle and bend your knees slightly. Hold your dumbbells and do a row by pulling your weights toward your chest, keeping your elbows close to your body and squeezing your shoulder blades. Extend the arms toward the floor, and repeat.',
   },
@@ -534,7 +534,3 @@ document.querySelectorAll('.btn').forEach(btn =>
     p.innerText = `Personalized workout for ${fname} ${lname} in level ${level}:`;
   }),
 );
-
-document.querySelector('#hide-div').addEventListener('click', () => {
-  document.querySelector('.div-workout').style.display = 'none';
-});
