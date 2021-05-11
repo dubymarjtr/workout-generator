@@ -510,7 +510,7 @@ function displayExercises(exercises) {
 
 document.querySelectorAll('.btn').forEach(btn =>
   btn.addEventListener('click', event => {
-    document.querySelector('.div-workout').style.display = 'block';
+    document.querySelector('.div-workout').style.display = 'flex';
     const option = event.target.id;
     if (option === 'btn-upper') {
       if (level === 'beginner') {
