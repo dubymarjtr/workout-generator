@@ -468,7 +468,7 @@ let fname;
 let lname;
 let level;
 const tbody = document.querySelector('tbody');
-const template = document.querySelector('template');
+const { content } = document.querySelector('template');
 
 form.addEventListener('submit', event => {
   event.preventDefault();
@@ -493,7 +493,20 @@ function getRandomExercises(array) {
   }
   return exercises;
 }
-function displayExercises(exercises) {}
+function displayExercises(exercises) {
+  tbody.innerHTML = '';
+
+  exercises.forEach(({ exercise, reps, weight, description }) => {
+    const newRow = content.cloneNode(true);
+    const tds = newRow.querySelectorAll('td');
+    tds[0].innerText = exercise;
+    tds[1].innerText = reps;
+    tds[2].innerText = weight;
+    tds[3].innerText = description;
+
+    tbody.appendChild(newRow);
+  });
+}
 
 document.querySelectorAll('.btn').forEach(btn =>
   btn.addEventListener('click', event => {
