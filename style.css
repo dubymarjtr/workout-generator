@@ -22,12 +22,14 @@ h1 {
   text-align: center;
 }
 .div-workout {
-  border: 1px black solid;
+  background-color: rgba(221, 210, 214, 0.4);
+  border-radius: 10px;
   margin: 0 auto;
   margin-bottom: 55px;
   margin-top: 55px;
   opacity: 0;
   padding: 35px;
+  position: relative;
   transition: visibility 0s, opacity 0.5s linear;
   visibility: hidden;
   width: 65vw;
@@ -112,20 +114,6 @@ input[type='email'] {
   transition: 0.5s;
 }
 
-table {
-  border-collapse: collapse;
-}
-
-table td,
-table th {
-  border: 1px solid lightgrey;
-  padding: 8px;
-}
-
-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
 .visible {
   opacity: 1;
   visibility: visible;
@@ -136,47 +124,76 @@ table tr:nth-child(even) {
   -webkit-box-shadow: 0 10px 6px -6px #777;
   -moz-box-shadow: 0 10px 6px -6px #777;
   box-shadow: 0 10px 6px -6px #777;
+}
 
-  /* Button styles */
-  #btn-upper {
-    background-color: #446c91;
-  }
-  #btn-lower {
-    background-color: #1b496b;
-  }
+/* Button styles */
+#btn-upper {
+  background-color: #446c91;
+}
 
-  #btn-abs {
-    background-color: #003a5b;
-  }
+#btn-lower {
+  background-color: #1b496b;
+}
 
-  #btn-upper:hover {
-    background-color: #9473aa;
-    transition: 0.5s;
-  }
-  #btn-lower:hover {
-    background-color: #955b8e;
-    transition: 0.5s;
-  }
+#btn-abs {
+  background-color: #003a5b;
+}
 
-  #btn-abs:hover {
-    background-color: #92436e;
-    transition: 0.5s;
-  }
+#btn-upper:hover {
+  background-color: #9473aa;
+  transition: 0.5s;
+}
+#btn-lower:hover {
+  background-color: #955b8e;
+  transition: 0.5s;
+}
 
-  #hide-div {
-    background-color: #a16565;
-    border: none;
-    border-radius: 2px;
-    color: white;
-    padding: 8px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: 0.5s;
-  }
+#btn-abs:hover {
+  background-color: #92436e;
+  transition: 0.5s;
+}
 
-  #hide-div:hover {
-    background-color: #003a5b;
-    transition: 0.5s;
-  }
+#hide-div {
+  background-color: #a16565;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.5s;
+}
+
+#hide-div:hover {
+  background-color: #003a5b;
+  transition: 0.5s;
+}
+
+/* table styles */
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border-bottom: 1px #8a5866 solid;
+  padding: 15px;
+  text-align: center;
+}
+
+tbody tr:hover {
+  background-color: rgba(159, 172, 189, 0.5);
+  transition: 0.5s;
+}
+
+thead {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 20px;
+}
+thead td:nth-child(1) {
+  text-align: center;
+}
+tbody td:nth-child(1) {
+  font-size: 1.15em;
 }
