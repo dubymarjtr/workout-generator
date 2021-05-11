@@ -491,20 +491,7 @@ function getRandomExercises(array) {
   }
   return exercises;
 }
-function displayExercises(exercises) {
-  const display = exercises
-    .map(
-      ({ exercise, reps, weight, description }) => `<li>
-  <p>${exercise}</p>
-  <p>Repetitions: ${reps}</p>
-  <p>Weight: ${weight}</p>
-  <p>Instructions: ${description}</p>
-  </li>`,
-    )
-    .join('');
-
-  p.innerHTML = display;
-}
+function displayExercises(exercises) {}
 
 document.querySelectorAll('.btn').forEach(btn =>
   btn.addEventListener('click', event => {
