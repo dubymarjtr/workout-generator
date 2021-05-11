@@ -467,6 +467,8 @@ const divButtons = document.querySelector('.buttons-choose');
 let fname;
 let lname;
 let level;
+const tbody = document.querySelector('tbody');
+const template = document.querySelector('template');
 
 form.addEventListener('submit', event => {
   event.preventDefault();
