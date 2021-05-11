@@ -508,6 +508,10 @@ function displayExercises(exercises) {
   });
 }
 
+document.querySelector('#hide-div').addEventListener('click', () => {
+  document.querySelector('.div-workout').classList.remove('visible');
+});
+
 document.querySelectorAll('.btn').forEach(btn =>
   btn.addEventListener('click', event => {
     document.querySelector('.div-workout').classList.add('visible');
