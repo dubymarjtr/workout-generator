@@ -475,7 +475,7 @@ form.addEventListener('submit', event => {
   fname = document.querySelector('#fname').value;
   lname = document.querySelector('#lname').value;
   level = document.querySelector('#level').value;
-  divButtons.style.display = 'block';
+  divButtons.classList.add('visible');
   form.reset();
 });
 
@@ -510,7 +510,7 @@ function displayExercises(exercises) {
 
 document.querySelectorAll('.btn').forEach(btn =>
   btn.addEventListener('click', event => {
-    document.querySelector('.div-workout').style.display = 'flex';
+    document.querySelector('.div-workout').classList.add('visible');
     const option = event.target.id;
     if (option === 'btn-upper') {
       if (level === 'beginner') {
