@@ -14,56 +14,61 @@
     <title>Workout Generator</title>
   </head>
   <body>
-    <h1>Workout Generator</h1>
-    <form class="myForm">
-      <label for="fname">First Name</label>
-      <input type="text" name="fname" id="fname" required />
+    <div>
+      <h1>Workout Generator</h1>
+      <div class="form-container">
+        <form class="myForm flex justify-content">
+          <label for="fname"
+            >First Name <input type="text" name="fname" id="fname" required
+          /></label>
 
-      <label for="lname">Last Name</label>
-      <input type="text" name="lname" id="lname" required />
+          <label for="lname"
+            >Last Name <input type="text" name="lname" id="lname" required
+          /></label>
 
-      <label>Age</label>
-      <input type="number" min="1" max="100" />
+          <label>Email <input type="email" name="email_address" /></label>
 
-      <label>Email</label>
-      <input type="email" name="email_address" />
+          <label for="level"
+            >Level of Training
+            <select id="level">
+              <option value="beginner" selected>Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select></label
+          >
+          <button id="submit" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="buttons-choose flex" style="display: none">
+        <button id="btn-upper" class="btn">Upper Body</button>
+        <button id="btn-lower" class="btn">Lower Body</button>
+        <button id="btn-abs" class="btn">Abs/Core</button>
+      </div>
+      <div class="div-workout" style="display: none">
+        <table>
+          <thead>
+            <tr>
+              <td>Exercise</td>
+              <td>Repetitions</td>
+              <td>Weight</td>
+              <td>How to do it</td>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
 
-      <label for="level">Level of Training</label>
-      <select id="level">
-        <option value="beginner" selected>Beginner</option>
-        <option value="intermediate">Intermediate</option>
-        <option value="advanced">Advanced</option>
-      </select>
-      <button id="submit" type="submit">Submit</button>
-    </form>
-    <div class="buttons-choose" style="display: none">
-      <button id="btn-upper" class="btn">Upper Body</button>
-      <button id="btn-lower" class="btn">Lower Body</button>
-      <button id="btn-abs" class="btn">Abs/Core</button>
+        <button id="hide-div">Close</button>
+      </div>
     </div>
-    <div class="div-workout" style="display: none">
-      <table>
-        <thead>
-          <tr>
-            <td>Exercise</td>
-            <td>Reps</td>
-            <td>Weight</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
 
-      <template>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </template>
-      <button id="hide-div">Close</button>
-    </div>
+    <template>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
     <script src="./scripts.js" type="module"></script>
   </body>
 </html>
