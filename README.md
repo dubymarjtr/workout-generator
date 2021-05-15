@@ -1,37 +1,42 @@
-# Front-End Starter
+# Workout Generator App
 
-**Try the CodeTour 🗺️.** [More info here.](https://github.com/microsoft/codetour#starting-tours)
+## Table of Contents
 
-To remove the tour (no need for it after you've gone through it and/or when starting a new app) - just delete the `.tours` directory.
+- [Overview](#overview)
+- [Built With](#built-with)
+- [Features](#features)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
-Use of this starter template assumes that you have a 'complete dev environment' setup - a terminal, Node, VS Code, at least. If not, you may want to [start here.](https://www.notion.so/codefinity/Setting-up-a-Local-Dev-Environment-for-JS-02a4e9f4a30043d3a8e7d109be3448f4)
+## Overview
 
----
+- [Netlify Page](https://workout-generator-app.netlify.app/)
+- My experience building this website was really exciting. Being able to combine the knowledge that I previously had building web pages, and now getting to make them interactive and dynamic is pretty fascinating.
+- I learned how to approach different application's features, and how to make them work correctly. My knowledge of JavaScript has improved building this website, since I got to implement many things I have learnt in my class, and much more, since I had to google many stuff as soon as the were popping up in my project.
+- For anybody wanting to build a dynamic website: you do not need to know all the information or be an expert in this language to achieve something like this. You learn while you code, so if you think you will not be able to know how everything is going to work at the beginning, I can tell you, you will know at the end.
 
-## What's Included
+### Built With
 
-- [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-- [![Code Style](https://badgen.net/badge/code%20style/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript). I have adjusted this slightly as per [this `commit`](https://github.com/manavm1990/node-starter/commit/ff1ed419d3ed411683b404b1cc6e221c859b0d33).
-- [Stylelint](https://stylelint.io/) for CSS linting. I am including the 'standard [configuration](https://stylelint.io/user-guide/configure)' with some additional rules to keep things alphabetical, indented with `2` spaces, etc.
-- [`husky`](https://www.npmjs.com/package/husky) will check over code quality with the linters b4 there is a successful `commit`.
-- Various VS Code 'settings' and 'extensions.' **Look in the bottom right when you open this up in VS Code to install them.**
-- [Kite 🪁](https://www.kite.com/javascript/) is also included. I personally recommend it, but it's certainly not compulsory to set this up.
-- Probably some other stuff I'm 4getting about for now 🤷🏽‍♂️
+- HTML5
+- CSS
+- Vanilla JavaScript
 
-## How To Use
+## Features
 
-Run `npm i` to get all the things installed.
+- This app generates a personalized workout depending on your level of training.
+- If you want to start working out, or maybe you already do, but you need some help having a different workout, this app will help you.
+- Include your basic information, and after that select the body part you will like to train.
+- An unique, not repeated workout will be displayed for you.
+- If there is any exercise that you do not like, you can keep clicking the button and more workouts will be generated.
 
-`npm run serve` will 🔥 up an instance of [`browser-sync`](https://browsersync.io/). You just write your front-end code and watch things update on your 'local web server.' 🦄
+## Contact
 
-Meanwhile, you will get alerted whenever there is something 'bad' in your code based on the aforementioned 👆🏽 linting. 🦄
+- [GitHub Account](https://github.com/dubymarjtr)
+- [LinkedIn Account](https://www.linkedin.com/in/dubymarjtr/)
 
-## Other Notes 🎶
+## Acknowledgements
 
-- One of the included VS Code Extensions allows us to easily alphabetize some parts of our code; for instance, CSS 💄 rules. Just highlight the appropriate block of rules and press 'F9.' See more deets [here.](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines)
-
-### Questions/Issues
-
-Reach me on [Twitter](https://twitter.com/GoCodeFinity) for ❓s or discussion.
-
-If it's an actual issue... [open 1.](https://github.com/manavm1990/node-starter/issues)
+- CIS 177 - Web Development I
+- MDN Tutorials
+- w3schools.com
+- css-tricks.com
